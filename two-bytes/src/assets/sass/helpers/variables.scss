@@ -1,0 +1,24 @@
+// Font
+@font-face {
+    font-family: Menco Medium;
+    src: url(../fonts/Menco\ Medium.otf);
+}
+
+// Colors 
+$light-bg-color: rgb(245, 245, 245);
+$dark-bg-color: rgb(19, 28, 37);
+$light-text-color: rgb(255, 255, 255);
+$dark-text-color: rgb(88, 88, 88);
+$first-blue: rgb(74, 202, 255);
+$second-blue: rgb(63, 179, 255);
+$third-blue: rgb(121, 216, 255);
+$fourth-blue: rgb(126, 157, 172);
+$fifth-blue: rgb(59, 174, 221);
+
+// Other colors
+$placeholder-color: #c5c5c5;
+
+// Responsive size
+$small-screen: '(max-width: 377px)';
+$middle-screen: '(max-width: 991px)';
+$large-screen: '(min-width: 992px)';

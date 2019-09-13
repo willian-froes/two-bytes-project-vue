@@ -1,0 +1,98 @@
+// Section background
+@mixin background-section($bg-color, $color, $bd-radius) {
+    background-color: $bg-color; 
+    color: $color;
+    @include border-radius($bd-radius);
+}
+
+// Background controller
+@mixin background-controller($attachment, $color, $image, $position, $repeat, $size) {
+    background-attachment: $attachment;
+    background-color: $color;
+    @include background-image($image);
+    background-position: $position;
+    background-repeat: $repeat;
+    @include background-size($size);
+}
+
+// Nav-item hover 
+@mixin responsive-nav-item-hover($size, $position) {
+    background-size: $size; 
+    background-position: $position;
+}   
+
+// Aling content to center and sizing    
+@mixin align-center-size($margin, $width) {
+    margin: $margin;
+    width: $width;
+};
+
+// Padding in top and bottom
+@mixin padding-y($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+// Directional social ballons border
+@mixin directional-border($border-params) {
+    border-left: $border-params;
+    border-bottom: $border-params;
+}
+
+// Facebook styling
+@mixin facebook-button-style($margin-to-ballon, $bg-color, $color) {
+    margin-right: $margin-to-ballon;
+    background-color: $bg-color;
+    color: $color;
+}
+
+// Custom placeholder
+%custom-placeholder {
+    & {
+        @include input-placeholder {
+            color: #bfbfbf;
+            font-style: italic;
+        }
+    }
+}
+
+// Social area borders
+%facebook-border {
+    border: 1px solid #dad8d8;
+}
+
+%twitter-border {
+    border: 1px solid #bdddf5;
+}
+
+// Input without background
+%input-transparent {
+    background-color: transparent;
+};
+
+// Text colors
+%text-light-color {
+    color: $light-text-color;
+}   
+
+// Follow-counts
+%follow-count-slot {
+    background-color: #ffffff;
+    padding-bottom: .1rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
+    position: relative;
+    width: 1.2rem;
+    font-size: .8rem;
+}
+
+%follow-count-directional {
+    content: ' ';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 5px;
+    left:-4px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+}

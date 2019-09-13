@@ -1,0 +1,76 @@
+/* Footer */
+
+.email-address-icon {
+    margin-right: 8px;
+    color: $first-blue;
+}
+
+.policies, .policies:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: $dark-text-color;
+}
+
+.social-button {
+    padding: .2rem .4rem; 
+    line-height: .1rem;
+    font-size: .8rem;
+}
+
+.facebook-button, .facebook-button:hover, .facebook-button:active, .facebook-button:focus {
+    @include facebook-button-style(5px, #ebecf1, #3c5898);
+    @extend %facebook-border;
+    @extend .social-button;
+}
+
+.twitter-button, .twitter-button:hover, .twitter-button:active, .twitter-button:focus {
+    background-image: linear-gradient(to bottom, #fbfdff 20%, #daeff8 80%);
+    @include facebook-button-style(5px, #ebebeb, #438ac0);
+    @extend %twitter-border;
+    @extend .social-button;
+}
+
+.follow-count-facebook {
+    color: $dark-text-color;
+    @extend %follow-count-slot;
+    @extend %facebook-border;
+}
+
+.follow-count-twitter {
+    color: #0e5c97;
+    @extend %follow-count-slot;
+    @extend %twitter-border;
+    @include border-radius(4px);
+}
+
+.follow-count-facebook:before {
+    @extend %follow-count-directional;
+    @include directional-border(1px solid #b3b4b8);
+}
+
+.follow-count-twitter:before {
+    @extend %follow-count-directional;
+    @include directional-border(1px solid #a9d6f8);
+}
+
+.twitter-share-button {
+    margin-right: 10px;
+}
+
+.social-buttons {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: bold;
+    
+    @media (max-width: 767px) {
+        margin-top: 1rem;
+        position: relative;
+        float: left;
+    }
+}
+
+.social-area {
+    position: relative;
+}

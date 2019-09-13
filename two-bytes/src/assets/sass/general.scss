@@ -1,0 +1,14 @@
+/* General */
+
+html, body, header {
+    font-family: "Menco Medium";
+    height: 100%;
+}
+
+.bg-light {
+    @include background-section($light-bg-color, $dark-text-color, 0px);
+}
+
+.bg-dark {
+    @include background-section($dark-bg-color, $light-text-color, 0px);
+}

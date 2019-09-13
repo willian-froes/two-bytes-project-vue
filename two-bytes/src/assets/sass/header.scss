@@ -1,0 +1,104 @@
+/* Header */
+
+header {
+    @include background-controller(fixed, null, url(../img/header-background.png), top center, null, cover);
+    @extend %text-light-color;
+}
+
+.menu-access {
+    @extend %text-light-color;
+}
+
+.nav-item {
+    text-decoration: none;
+    @extend %text-light-color;
+
+    &:hover {
+        background-repeat: no-repeat;
+        background-image: linear-gradient($first-blue, $first-blue);
+    }
+
+    @media #{$middle-screen} {
+        text-indent: 4%;
+
+        &:hover {
+            @include responsive-nav-item-hover(8px 70%, left);
+        }
+    }
+
+    @media #{$large-screen} {
+        margin-left: 10px;
+
+        &:hover {
+            @include responsive-nav-item-hover(85% 5px, top center);
+        }
+    }
+}
+
+.nav-link {
+    text-transform: uppercase;
+    @extend %text-light-color;
+    
+    &:hover {
+        @extend %text-light-color;
+    }
+}
+
+
+.header-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include transition-duration(.8s);
+
+    @media #{$middle-screen} {
+        width: 80%;
+    }
+
+    @media #{$large-screen} {
+        width: 60%; 
+    }
+}
+
+.main-title {
+    margin-bottom: 2rem;
+
+    @media #{$small-screen} {
+        font-size: 2.1rem; 
+    }
+
+    @media #{$middle-screen} {
+        font-size: 2.5rem;
+    }
+
+    @media #{$large-screen} {
+        font-size: 4rem;
+    }
+}
+
+.search-button, .search-button:hover, .search-button:active, .search-button:focus, .search-button:checked {
+    @include background-controller(null, $first-blue, linear-gradient($second-blue, $second-blue), bottom center,  no-repeat, 100% 5px);   
+    @include border-radius(3px);
+    @extend %text-light-color;
+    border: none;
+    padding: 8px 20px 12px 20px;
+
+    @media #{$middle-screen} {
+        width: 100%;
+    }
+}
+
+#job-description {
+    @include background-controller(null, null, linear-gradient(#e0e0e0,#e0e0e0), bottom center, no-repeat, 100% 3px);
+    @extend %custom-placeholder;
+}
+
+#job-location {
+    color: #bfbfbf;
+}
+
+option {
+    color: #000;
+    font-style: normal;
+}

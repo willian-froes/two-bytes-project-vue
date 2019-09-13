@@ -1,0 +1,71 @@
+/* Main */
+
+.jumbotron {
+    @extend .area-divider;
+}
+
+.area-divider {
+    margin-bottom: 0;
+
+    @include background-controller(null, null, linear-gradient(
+        to right, 
+        $first-blue, $first-blue 20%,
+        $second-blue 20%, $second-blue 40%,
+        $third-blue 40%, $third-blue 60%,
+        $fourth-blue 60%, $fourth-blue 80%,
+        $fifth-blue 80%, $fifth-blue 100%
+    ), top center, repeat-x, 40% 6px);
+
+    @media #{$middle-screen} {
+        @include background-controller(null, null, linear-gradient(
+            to right, 
+            $first-blue, $first-blue 33%,
+            $second-blue 33%, $second-blue 67%,
+            $third-blue 67%, $third-blue 100%
+        ), top center, no-repeat, 100% 6px);
+    }
+}
+
+p {
+    @include align-center-size(0 auto, 70%);
+}
+
+.line-sm {
+    @include background-controller(null, null, linear-gradient($first-blue, $first-blue), bottom center, no-repeat, null);
+    @include align-center-size(45px auto, 15%);
+    height: 5px;
+}
+
+.container-sm-height {
+    @include padding-y(4rem, 4rem);
+}
+
+.button-light {
+    @extend %input-transparent;
+    color: $first-blue;
+    margin: 15px 0 15px 0; 
+    border: 2px solid $first-blue;
+    outline: none;
+}
+
+.button-light:active, .button-light:hover {
+    background-color: $first-blue;
+    @extend %text-light-color;
+}
+
+.input-dark, .input-dark:active, .input-dark:hover, .input-dark:focus {
+    @extend %custom-placeholder;
+    @extend %input-transparent;
+    @extend %text-light-color;
+    margin-top: 20px;
+    border: 1px solid $first-blue;
+}
+
+.find-button {
+    @include padding-y(1rem, 1rem);
+    font-size: .9rem;
+}
+
+.email-input-icon {
+    @include background-controller(null, null, url(../img/email-input-icon.png), 95% center, no-repeat, .8rem);
+}
